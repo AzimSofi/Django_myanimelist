@@ -10,6 +10,9 @@
     height: 34px;
     padding: 0.5% 2%;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar a:hover {
@@ -41,6 +44,41 @@ h1 {
 .right-column {
     width: 808px !important;
     height: auto;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #747474 !important;
+    height: 20px;
+    border-radius: 2.5px;
+}
+
+.progress-bar-fill {
+    background-color: #338543 !important;
+    height: 20px;
+    height: 100%;
+    border-radius: 2.5px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.content_item {
+    width: 40px;
+    height: 60px;
+}
+
+.Last_anime_updates .row .col:has(img) {
+    width: 40px !important;
+    height: 60px;
+    border: 1px;
+    margin-right: 8px;
+}
+
+.Last_manga_updates .row .col:has(img) {
+    width: 40px !important;
+    height: 60px;
+    border: 1px;
+    margin-right: 8px;
 }
 /* 
 234
