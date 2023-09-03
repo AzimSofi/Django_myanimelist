@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>myanimelist profile</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{% static 'mal_userpage/css/styles.css' %}">
+        <!-- bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="mt-2 mb-2">
+                <img height="48px" src="https://cdn.myanimelist.net/images/mal-logo-xsmall-white@2x.png?v=1634263200">
+            </div>
+        </header>
+        <div class="navbar d-flex justify-content-start">
+            <a href="#home">ホーム</a>
+            <a href="#about">アバウト</a>
+            <a href="#services">サービス</a>
+            <a href="#contact">コンタクト</a>
+        </div>
+        <h1>
+            {{ name }}'s Profile
+        </h1>
+        <div class="container">
+            <div class="row main-row">
+                <div class="col left-column">
+                    <img src="https://cdn.myanimelist.net/s/common/userimages/809c4c22-7a15-4866-9bd9-9ab1b74f00a4_225w?s=859f8fb3071ac92c9e3762efc36804a8">
+                </div>
+                <div class="col right-column">
+                    <h2>Statistics</h2>
+                    <div class="row">
+                        <div class="col">
+                            <h5>Anime Stats</h5>
+                        </div>
+                        <div class="col">
+                            <h5>Last Anime Updates</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>

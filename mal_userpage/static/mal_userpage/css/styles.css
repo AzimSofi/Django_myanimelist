@@ -1,0 +1,48 @@
+.navbar {
+    background-color: #2e51a2;
+    margin: 0;
+    padding: 0 !important;
+    height: 34px;
+}
+
+.navbar a {
+    color: white;
+    height: 34px;
+    padding: 0.5% 2%;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #333333;
+}
+
+body {
+    background-color: #121212 !important;
+}
+
+h1 {
+    color: #e0e0e0 !important;
+}
+
+.container, col{
+    color: #e0e0e0 !important;
+}
+
+.main-row {
+    width: 1060px !important;
+    height: auto;
+}
+
+.left-column {
+    width: 234px !important;
+    height: auto;
+}
+
+.right-column {
+    width: 808px !important;
+    height: auto;
+}
+/* 
+234
+808
+*/
