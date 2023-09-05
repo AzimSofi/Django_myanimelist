@@ -21,7 +21,17 @@
 
 body {
     background-color: #121212 !important;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh; /* 追加：垂直方向に全体の高さを占めるように設定 */
+    margin: 0; /* 追加：余白を0に設定 */
 }
+
+.profile_container {
+    width: 1060px;
+    min-height: 100vh; /* 垂直方向にページ全体を占める */
+}
+
 
 h1 {
     color: #e0e0e0 !important;
@@ -32,18 +42,14 @@ h1 {
 }
 
 .main-row {
-    width: 1060px !important;
-    height: auto;
 }
 
 .left-column {
-    width: 234px !important;
-    height: auto;
+    width: 224px;
+    border: 0px 1.333px 0px 0px;
 }
-
+    
 .right-column {
-    width: 808px !important;
-    height: auto;
 }
 
 .progress-bar {
@@ -80,6 +86,22 @@ h1 {
     border: 1px;
     margin-right: 8px;
 }
+
+.grey_text {
+    color: #e0e0e0 !important;
+}
+
+.dropdown-toggle {
+    border-radius: 0;
+    padding: 0px 8px 0px 8px;
+    border: 0 !important;
+}
+
+.dropdown-toggle:hover {
+    background-color: #333333 !important;
+    border-radius: 0;
+}
+
 /* 
 234
 808
