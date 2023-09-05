@@ -13,173 +13,190 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header>
-            <div class="mt-2 mb-2">
-                <img height="48px" src="https://cdn.myanimelist.net/images/mal-logo-xsmall-white@2x.png?v=1634263200">
-            </div>
-        </header>
-        <div class="navbar d-flex justify-content-start">
-            <a href="#home">ホーム</a>
-            <a href="#about">アバウト</a>
-            <a href="#services">サービス</a>
-            <a href="#contact">コンタクト</a>
-        </div>
-        <h1>
-            {{ name }}'s Profile
-        </h1>
-        <div class="container">
-            <div class="row main-row">
-                <div class="col left-column">
-                    <img src="https://cdn.myanimelist.net/s/common/userimages/809c4c22-7a15-4866-9bd9-9ab1b74f00a4_225w?s=859f8fb3071ac92c9e3762efc36804a8">
-                </div>
-                <div class="col right-column">
-                    <h2>Statistics</h2>
-                    <div class="row">
-                        <div class="col">
-                            <div class="Anime_stats">
-                                <h5>Anime Stats</h5>
-                                <div class="row">
-                                    <div class="col">
-                                        Days: <strong>11.0</strong>
-                                    </div>
-                                    <div class="col">
-                                        Mean Score: <strong>5.35</strong>
-                                    </div>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-bar-fill" style="width: 70%;"></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <div>
-                                            Watching
-                                        </div>
-                                        <div>
-                                            Completed
-                                        </div>
-                                        <div>
-                                            On-Hold
-                                        </div>
-                                        <div>
-                                            Dropped
-                                        </div>
-                                        <div>
-                                            Plan to Watch
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div>
-                                            Total Entries
-                                        </div>
-                                        <div>
-                                            Rewatched
-                                        </div>
-                                        <div>
-                                            Episodes
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="Manga_stats">
-                                <h5>Manga Stats</h5>
-                                <div class="row">
-                                    <div class="col">
-                                        Days: <strong>2.0</strong>
-                                    </div>
-                                    <div class="col">
-                                        Mean Score: <strong>5.50</strong>
-                                    </div>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-bar-fill" style="width: 70%;"></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <div>
-                                            Reading
-                                        </div>
-                                        <div>
-                                            Completed
-                                        </div>
-                                        <div>
-                                            On-Hold
-                                        </div>
-                                        <div>
-                                            Dropped
-                                        </div>
-                                        <div>
-                                            Plan to Read
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div>
-                                            Total Entries
-                                        </div>
-                                        <div>
-                                            Reread
-                                        </div>
-                                        <div>
-                                            Chapters
-                                        </div>
-                                        <div>
-                                            Volumes
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        <div class="profile_container">
+            <header>
+                <div class="mt-2 mb-2 d-flex justify-content-between align-items-center">
+                    <div>
+                        <img height="48px" src="https://cdn.myanimelist.net/images/mal-logo-xsmall-white@2x.png?v=1634263200">
+                    </div>
+                    <div class="grey_text d-flex flex-row">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle grey_text" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <strong>{{ name }}</strong>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">プロフィール</a></li>
+                                <li><a class="dropdown-item" href="#">設定</a></li>
+                                <li><a class="dropdown-item" href="#">ログアウト</a></li>
+                            </ul>
+                        </div id="">
+                            <img class="align-self-center" width="30px" height="30px" src="https://cdn.myanimelist.net/s/common/userimages/809c4c22-7a15-4866-9bd9-9ab1b74f00a4_225w?s=859f8fb3071ac92c9e3762efc36804a8">    
                         </div>
-                        <div class="col">
-                            <div class="Last_anime_updates">
-                                <h5>Last Anime Updates</h5>
-                                <div class="row mb-2">
-                                    <div class="col">
-                                        <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/anime/1491/132864.webp?s=bf8969abc40221f2202d481e3c15f6a0">
+                </div>
+            </header>
+            <div class="navbar d-flex justify-content-start">
+                <a href="#home">ホーム</a>
+                <a href="#about">アバウト</a>
+                <a href="#services">サービス</a>
+                <a href="#contact">コンタクト</a>
+            </div>
+            <h1>
+                {{ name }}のプロフィール
+            </h1>
+            <div class="container">
+                <div class="d-flex flex-row main-row">
+                    <div class="col left-column">
+                        <img src="https://cdn.myanimelist.net/s/common/userimages/809c4c22-7a15-4866-9bd9-9ab1b74f00a4_225w?s=859f8fb3071ac92c9e3762efc36804a8">
+                    </div>
+                    <div class="col flex-grow right-column">
+                        <h2>Statistics</h2>
+                        <div class="row">
+                            <div class="col">
+                                <div class="Anime_stats">
+                                    <h5>Anime Stats</h5>
+                                    <div class="row">
+                                        <div class="col">
+                                            Days: <strong>11.0</strong>
+                                        </div>
+                                        <div class="col">
+                                            Mean Score: <strong>5.35</strong>
+                                        </div>
                                     </div>
-                                    <div class="col">
-                                        Spy Kyoushitsu
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-fill" style="width: 70%;"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div>
+                                                Watching
+                                            </div>
+                                            <div>
+                                                Completed
+                                            </div>
+                                            <div>
+                                                On-Hold
+                                            </div>
+                                            <div>
+                                                Dropped
+                                            </div>
+                                            <div>
+                                                Plan to Watch
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div>
+                                                Total Entries
+                                            </div>
+                                            <div>
+                                                Rewatched
+                                            </div>
+                                            <div>
+                                                Episodes
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="row mb-2">
-                                    <div class="col">
-                                        <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/anime/1147/122444.webp?s=2a011186fe78cff6075b82c9f266d64c">
+                                <div class="Manga_stats">
+                                    <h5>Manga Stats</h5>
+                                    <div class="row">
+                                        <div class="col">
+                                            Days: <strong>2.0</strong>
+                                        </div>
+                                        <div class="col">
+                                            Mean Score: <strong>5.50</strong>
+                                        </div>
                                     </div>
-                                    <div class="col">
-                                        Watashi no Shiawase na Kekkon
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-fill" style="width: 70%;"></div>
                                     </div>
-                                </div>
-                                <div class="row mb-2">
-                                    <div class="col">
-                                        <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/anime/1146/113477.webp?s=7851bfc5bbfd734954a45535abcc7377">
-                                    </div>
-                                    <div class="col">
-                                        Hige wo Soru. Soshite Joshikousei wo Hirou.
+                                    <div class="row">
+                                        <div class="col">
+                                            <div>
+                                                Reading
+                                            </div>
+                                            <div>
+                                                Completed
+                                            </div>
+                                            <div>
+                                                On-Hold
+                                            </div>
+                                            <div>
+                                                Dropped
+                                            </div>
+                                            <div>
+                                                Plan to Read
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div>
+                                                Total Entries
+                                            </div>
+                                            <div>
+                                                Reread
+                                            </div>
+                                            <div>
+                                                Chapters
+                                            </div>
+                                            <div>
+                                                Volumes
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="Last_manga_updates">
-                                <h5>Last Manga Updates</h5>
-                                <div class="row mb-2">
-                                    <div class="col">
-                                        <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/manga/3/136045.webp?s=3e6ebd7ce5b0acaed3d53a157f17a28b">
+                            <div class="col">
+                                <div class="Last_anime_updates">
+                                    <h5>Last Anime Updates</h5>
+                                    <div class="row mb-2">
+                                        <div class="col">
+                                            <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/anime/1491/132864.webp?s=bf8969abc40221f2202d481e3c15f6a0">
+                                        </div>
+                                        <div class="col">
+                                            Spy Kyoushitsu
+                                        </div>
                                     </div>
-                                    <div class="col">
-                                        Karakai Jouzu no Takagi-san
+                                    <div class="row mb-2">
+                                        <div class="col">
+                                            <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/anime/1147/122444.webp?s=2a011186fe78cff6075b82c9f266d64c">
+                                        </div>
+                                        <div class="col">
+                                            Watashi no Shiawase na Kekkon
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col">
+                                            <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/anime/1146/113477.webp?s=7851bfc5bbfd734954a45535abcc7377">
+                                        </div>
+                                        <div class="col">
+                                            Hige wo Soru. Soshite Joshikousei wo Hirou.
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="row mb-2">
-                                    <div class="col">
-                                        <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/manga/3/216480.webp?s=86a401d7ca938cb62c11ecd129114def">
+                                <div class="Last_manga_updates">
+                                    <h5>Last Manga Updates</h5>
+                                    <div class="row mb-2">
+                                        <div class="col">
+                                            <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/manga/3/136045.webp?s=3e6ebd7ce5b0acaed3d53a157f17a28b">
+                                        </div>
+                                        <div class="col">
+                                            Karakai Jouzu no Takagi-san
+                                        </div>
                                     </div>
-                                    <div class="col">
-                                        Fukakai na Boku no Subete wo
+                                    <div class="row mb-2">
+                                        <div class="col">
+                                            <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/manga/3/216480.webp?s=86a401d7ca938cb62c11ecd129114def">
+                                        </div>
+                                        <div class="col">
+                                            Fukakai na Boku no Subete wo
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row mb-2">
-                                    <div class="col">
-                                        <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/manga/3/188967.webp?s=1044d289764245f71761c7a256cda028">
-                                    </div>
-                                    <div class="col">
-                                        Kishuku Gakkou no Juliet
+                                    <div class="row mb-2">
+                                        <div class="col">
+                                            <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/manga/3/188967.webp?s=1044d289764245f71761c7a256cda028">
+                                        </div>
+                                        <div class="col">
+                                            Kishuku Gakkou no Juliet
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -188,6 +205,7 @@
                 </div>
             </div>
         </div>
+
         <script src="" async defer></script>
     </body>
 </html>
