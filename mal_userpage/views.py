@@ -6,5 +6,5 @@ def index(request):
     return render(
         request, 
         'mal_userpage/index.html', 
-        {'name': 'サクライ'}
+        {'name': 'Sakurai'}
         )
