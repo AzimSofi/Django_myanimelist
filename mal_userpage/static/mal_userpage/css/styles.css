@@ -35,6 +35,31 @@ body {
 
 h1 {
     color: #e0e0e0 !important;
+    font-family: Verdana,Arial;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: Avenir,lucida grande,tahoma,verdana,arial,sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+h5 {
+    font-family: Avenir,lucida grande,tahoma,verdana,arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.dropdown button strong {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.navbar a {
+    font-size: 13px;
+    font-weight: 700;
 }
 
 .container, col{
@@ -45,32 +70,25 @@ h1 {
 }
 
 .left-column {
-    width: 224px;
-    border: 0px 1.333px 0px 0px;
+    width: 225px;
 }
-    
+
+#profilepic-leftcolumn {
+    padding: 8px 8px 8px 0;
+}
+
+#profilepic-leftcolumn img {
+    max-width: 100%;
+}
+
 .right-column {
-}
-
-.progress-bar {
-    width: 100%;
-    background-color: #747474 !important;
-    height: 20px;
-    border-radius: 2.5px;
-}
-
-.progress-bar-fill {
-    background-color: #338543 !important;
-    height: 20px;
-    height: 100%;
-    border-radius: 2.5px;
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
 }
 
 .content_item {
     width: 40px;
     height: 60px;
+    border: 1px;
+    margin: 0px 8px 0px 0px;
 }
 
 .Last_anime_updates .row .col:has(img) {
@@ -82,7 +100,7 @@ h1 {
 
 .Last_manga_updates .row .col:has(img) {
     width: 40px !important;
-    height: 60px;
+    height: 60px !important;
     border: 1px;
     margin-right: 8px;
 }
@@ -102,6 +120,138 @@ h1 {
     border-radius: 0;
 }
 
+.progress-bar {
+    width: 100%;
+    background-color: #747474 !important;
+    height: 20px;
+}
+
+.progress-bar-fill {
+    background-color: #338543 !important;
+}
+
+.Last_anime_updates .d-flex .col .progress-bar,
+.Last_manga_updates .d-flex .col .progress-bar {
+    width: 190px;
+    height: 14px;
+    background-color: #272727 !important;
+    border-radius: 2.5px;
+}
+
+.Last_anime_updates .d-flex .col .progress-bar .progress-bar-fill,
+.Last_manga_updates .d-flex .col .progress-bar .progress-bar-fill{
+    width: 190px;
+    height: 10px;
+    border-radius: 2.5px;
+}
+
+/* .progress-bar .watching,
+.progress-bar .completed,
+.progress-bar .on-hold,
+.progress-bar .dropped,
+.progress-bar .plan-to-watch {
+    background-color: #338543 !important;
+    height: 20px;
+    height: 100%;
+    border-radius: 2.5px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+} */
+
+.Manga_stats .progress-bar {
+    border-radius: 2.5px;
+    height: 100%;
+}
+
+.Anime_stats .progress-bar {
+    border-radius: 2.5px;
+}
+
+.Manga_stats .progress-bar-fill {
+    height: 18px;
+}
+
+.watching {
+    background-color: red;
+}
+  
+.completed {
+    background-color: green;
+}
+  
+.on-hold {
+    background-color: blue;
+}
+  
+.dropped {
+    background-color: yellow;
+}
+  
+.plan-to-watch {
+    background-color: orange;
+}
+  
+.circle {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+
+.legend .col li a,
+.Last_anime_updates .d-flex .col a,
+.Last_manga_updates .d-flex .col a {
+    color: #abc4ed;
+    text-decoration: none;
+    font-family: Verdana,Arial;
+    font-size: 11px;
+}
+
+.col a:hover, 
+.Last_anime_updates .row .col a:hover,
+.Last_manga_updates .row .col a:hover {
+    text-decoration: underline;
+}
+
+.content_item_caption {
+    color: #a3a3a3;
+    text-decoration: none;
+    font-family: Verdana,Arial;
+    font-size: 11px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.legend {
+    list-style-type: none;
+}
+
+.legend .watching {
+    background-color: #338543;
+}
+
+.legend .completed {
+    background-color: #2d4276;
+}
+
+.legend .on-hold {
+    background-color: #c9a31f;
+}
+
+.legend .dropped {
+    background-color: #832f30;
+}
+
+.legend .plan-to-watch {
+    background-color: #747474;
+}
+
+.Anime_stats .legend {
+    margin: 12px 8px 0px 8px;
+}
 /* 
 234
 808

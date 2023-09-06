@@ -45,12 +45,14 @@
             </h1>
             <div class="container">
                 <div class="d-flex flex-row main-row">
-                    <div class="col left-column">
-                        <img src="https://cdn.myanimelist.net/s/common/userimages/809c4c22-7a15-4866-9bd9-9ab1b74f00a4_225w?s=859f8fb3071ac92c9e3762efc36804a8">
+                    <div class="left-column d-flex flex-column">
+                        <div id="profilepic-leftcolumn">
+                            <img src="https://cdn.myanimelist.net/s/common/userimages/809c4c22-7a15-4866-9bd9-9ab1b74f00a4_225w?s=859f8fb3071ac92c9e3762efc36804a8">
+                        </div>
                     </div>
-                    <div class="col flex-grow right-column">
+                    <div class="right-column flex-fill">
                         <h2>Statistics</h2>
-                        <div class="row">
+                        <div class="row ">
                             <div class="col">
                                 <div class="Anime_stats">
                                     <h5>Anime Stats</h5>
@@ -63,10 +65,27 @@
                                         </div>
                                     </div>
                                     <div class="progress-bar">
-                                        <div class="progress-bar-fill" style="width: 70%;"></div>
+                                        <!-- <div class="progress-bar-fill" style="width: 70%;"></div> -->
+                                        <div class="watching" style="width: 24%;"></div>
+                                        <div class="completed" style="width: 48%;"></div>
+                                        <div class="on-hold" style="width: 0;"></div>
+                                        <div class="dropped" style="width: 3%;"></div>
+                                        <div class="plan-to-watch" style="width: 25%;"></div>
                                     </div>
-                                    <div class="row">
+                                    <div class="row legend">
                                         <div class="col">
+                                            <li><span class="circle watching"></span> <a href="#">Watching</a> 24</li>
+                                            <li><span class="circle completed"></span> <a href="#">Completed</a> 48</li>
+                                            <li><span class="circle on-hold"></span> <a href="#">On-Hold</a> 0</li>
+                                            <li><span class="circle dropped"></span> <a href="#">Dropped</a> 3</li>
+                                            <li><span class="circle plan-to-watch"></span> <a href="#">Plan to Watch</a> 30</li>
+                                        </div>
+                                        <div class="col d-flex flex-column justify-content-start">
+                                            <li class="content_item_caption">Total Entries</li>
+                                            <li class="content_item_caption">Rewatched</li>
+                                            <li class="content_item_caption">Episodes</li>
+                                        </div>
+                                        <!-- <div class="col">
                                             <div>
                                                 Watching
                                             </div>
@@ -82,18 +101,8 @@
                                             <div>
                                                 Plan to Watch
                                             </div>
-                                        </div>
-                                        <div class="col">
-                                            <div>
-                                                Total Entries
-                                            </div>
-                                            <div>
-                                                Rewatched
-                                            </div>
-                                            <div>
-                                                Episodes
-                                            </div>
-                                        </div>
+                                        
+                                         -->
                                     </div>
                                 </div>
                                 <div class="Manga_stats">
@@ -147,55 +156,79 @@
                             <div class="col">
                                 <div class="Last_anime_updates">
                                     <h5>Last Anime Updates</h5>
-                                    <div class="row mb-2">
+                                    <div class="mb-2 d-flex align-items-start">
+                                        <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/anime/1491/132864.webp?s=bf8969abc40221f2202d481e3c15f6a0">
                                         <div class="col">
-                                            <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/anime/1491/132864.webp?s=bf8969abc40221f2202d481e3c15f6a0">
-                                        </div>
-                                        <div class="col">
-                                            Spy Kyoushitsu
-                                        </div>
-                                    </div>
-                                    <div class="row mb-2">
-                                        <div class="col">
-                                            <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/anime/1147/122444.webp?s=2a011186fe78cff6075b82c9f266d64c">
-                                        </div>
-                                        <div class="col">
-                                            Watashi no Shiawase na Kekkon
+                                            <a href="#">Spy Kyoushitsu</a>
+                                            <div class="progress-bar">
+                                                <div class="progress-bar-fill" style="width: 70%;"></div>
+                                            </div>
+                                            <div class="content_item_caption">
+                                                Watching 2/12 · Scored -
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="row mb-2">
+                                    <div class="mb-2 d-flex align-items-start">
+                                        <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/anime/1147/122444.webp?s=2a011186fe78cff6075b82c9f266d64c">
                                         <div class="col">
-                                            <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/anime/1146/113477.webp?s=7851bfc5bbfd734954a45535abcc7377">
+                                            <a href="#">Watashi no Shiawase na Kekkon</a>
+                                            <div class="progress-bar">
+                                                <div class="progress-bar-fill" style="width: 70%;"></div>
+                                            </div>
+                                            <div class="content_item_caption">
+                                                Watching 2/12 · Scored -
+                                            </div>
                                         </div>
+                                    </div>
+                                    <div class="mb-2 d-flex align-items-start">
+                                        <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/anime/1146/113477.webp?s=7851bfc5bbfd734954a45535abcc7377">
                                         <div class="col">
-                                            Hige wo Soru. Soshite Joshikousei wo Hirou.
+                                            <a href="#">Hige wo Soru. Soshite Joshikousei wo Hirou.</a>
+                                            <div class="progress-bar">
+                                                <div class="progress-bar-fill" style="width: 70%;"></div>
+                                            </div>
+                                            <div class="content_item_caption">
+                                                Watching 2/12 · Scored -
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="Last_manga_updates">
                                     <h5>Last Manga Updates</h5>
-                                    <div class="row mb-2">
+                                    <div class="mb-2 d-flex align-items-start">
+                                        <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/manga/3/136045.webp?s=3e6ebd7ce5b0acaed3d53a157f17a28b">
                                         <div class="col">
-                                            <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/manga/3/136045.webp?s=3e6ebd7ce5b0acaed3d53a157f17a28b">
-                                        </div>
-                                        <div class="col">
-                                            Karakai Jouzu no Takagi-san
-                                        </div>
-                                    </div>
-                                    <div class="row mb-2">
-                                        <div class="col">
-                                            <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/manga/3/216480.webp?s=86a401d7ca938cb62c11ecd129114def">
-                                        </div>
-                                        <div class="col">
-                                            Fukakai na Boku no Subete wo
+                                            <a href="#">Karakai Jouzu no Takagi-san</a>
+                                            <div class="progress-bar">
+                                                <div class="progress-bar-fill" style="width: 70%;"></div>
+                                            </div>
+                                            <div class="content_item_caption">
+                                                Watching 2/12 · Scored -
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="row mb-2">
+                                    <div class="mb-2 d-flex align-items-start">
+                                        <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/manga/3/216480.webp?s=86a401d7ca938cb62c11ecd129114def">
                                         <div class="col">
-                                            <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/manga/3/188967.webp?s=1044d289764245f71761c7a256cda028">
+                                            <a href="#">Fukakai na Boku no Subete wo</a>
+                                            <div class="progress-bar">
+                                                <div class="progress-bar-fill" style="width: 70%;"></div>
+                                            </div>
+                                            <div class="content_item_caption">
+                                                Watching 2/12 · Scored -
+                                            </div>
                                         </div>
+                                    </div>
+                                    <div class="mb-2 d-flex align-items-start">
+                                        <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/manga/3/188967.webp?s=1044d289764245f71761c7a256cda028">
                                         <div class="col">
-                                            Kishuku Gakkou no Juliet
+                                            <a href="#">Kishuku Gakkou no Juliet</a>
+                                            <div class="progress-bar">
+                                                <div class="progress-bar-fill" style="width: 70%;"></div>
+                                            </div>
+                                            <div class="content_item_caption">
+                                                Watching 2/12 · Scored -
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -205,7 +238,6 @@
                 </div>
             </div>
         </div>
-
         <script src="" async defer></script>
     </body>
 </html>
