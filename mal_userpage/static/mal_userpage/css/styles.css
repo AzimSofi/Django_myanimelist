@@ -196,9 +196,8 @@ h5 {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    margin-right: 5px;
+    margin-right: 12px;
 }
-
 
 .legend .col li a,
 .Last_anime_updates .d-flex .col a,
@@ -209,10 +208,10 @@ h5 {
     font-size: 11px;
 }
 
-.col a:hover, 
-.Last_anime_updates .row .col a:hover,
-.Last_manga_updates .row .col a:hover {
-    text-decoration: underline;
+.legend a:hover, 
+.Last_anime_updates a:hover,
+.Last_manga_updates a:hover {
+    text-decoration: underline !important;
 }
 
 .content_item_caption {
@@ -249,7 +248,8 @@ h5 {
     background-color: #747474;
 }
 
-.Anime_stats .legend {
+.Anime_stats .legend,
+.Manga_stats .legend {
     margin: 12px 8px 0px 8px;
 }
 /* 

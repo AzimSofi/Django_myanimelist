@@ -11,6 +11,10 @@
         <!-- bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+        <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
     </head>
     <body>
         <div class="profile_container">
@@ -74,35 +78,67 @@
                                     </div>
                                     <div class="row legend">
                                         <div class="col">
-                                            <li><span class="circle watching"></span> <a href="#">Watching</a> 24</li>
-                                            <li><span class="circle completed"></span> <a href="#">Completed</a> 48</li>
-                                            <li><span class="circle on-hold"></span> <a href="#">On-Hold</a> 0</li>
-                                            <li><span class="circle dropped"></span> <a href="#">Dropped</a> 3</li>
-                                            <li><span class="circle plan-to-watch"></span> <a href="#">Plan to Watch</a> 30</li>
-                                        </div>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <a href="#">
+                                                        <span class="circle watching"></span>Watching
+                                                    </a>
+                                                </div>
+                                                <span class="grey_text content_item_caption">24</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <a href="#">
+                                                        <span class="circle completed"></span>Completed
+                                                    </a>
+                                                </div>
+                                                <span class="grey_text content_item_caption">48</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <a href="#">
+                                                        <span class="circle on-hold"></span>On-Hold
+                                                    </a>
+                                                </div>
+                                                <span class="grey_text content_item_caption">0</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                <a href="#">
+                                                    <span class="circle dropped"></span>Dropped
+                                                </a>
+                                                </div>
+                                                <span class="grey_text content_item_caption">3</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <a href="#">
+                                                        <span class="circle plan-to-watch"></span>Plan to Watch
+                                                    </a>
+                                                </div>
+                                                <span class="grey_text content_item_caption">30</span>
+                                            </li>
+                                          </div>                                          
                                         <div class="col d-flex flex-column justify-content-start">
-                                            <li class="content_item_caption">Total Entries</li>
-                                            <li class="content_item_caption">Rewatched</li>
-                                            <li class="content_item_caption">Episodes</li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div class="content_item_caption">
+                                                  Total Entries
+                                                </div>
+                                                <span class="grey_text content_item_caption">105</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div class="content_item_caption">
+                                                    Rewatched
+                                                </div>
+                                                <span class="grey_text content_item_caption">1</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div class="content_item_caption">
+                                                    Episodes
+                                                </div>
+                                                <span class="grey_text content_item_caption">663</span>
+                                            </li>
                                         </div>
-                                        <!-- <div class="col">
-                                            <div>
-                                                Watching
-                                            </div>
-                                            <div>
-                                                Completed
-                                            </div>
-                                            <div>
-                                                On-Hold
-                                            </div>
-                                            <div>
-                                                Dropped
-                                            </div>
-                                            <div>
-                                                Plan to Watch
-                                            </div>
-                                        
-                                         -->
                                     </div>
                                 </div>
                                 <div class="Manga_stats">
@@ -118,37 +154,74 @@
                                     <div class="progress-bar">
                                         <div class="progress-bar-fill" style="width: 70%;"></div>
                                     </div>
-                                    <div class="row">
+                                    <div class="row legend">
                                         <div class="col">
-                                            <div>
-                                                Reading
-                                            </div>
-                                            <div>
-                                                Completed
-                                            </div>
-                                            <div>
-                                                On-Hold
-                                            </div>
-                                            <div>
-                                                Dropped
-                                            </div>
-                                            <div>
-                                                Plan to Read
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div>
-                                                Total Entries
-                                            </div>
-                                            <div>
-                                                Reread
-                                            </div>
-                                            <div>
-                                                Chapters
-                                            </div>
-                                            <div>
-                                                Volumes
-                                            </div>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <a href="#">
+                                                        <span class="circle watching"></span>Reading
+                                                    </a>
+                                                </div>
+                                                <span class="grey_text content_item_caption">17</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <a href="#">
+                                                        <span class="circle completed"></span>Completed
+                                                    </a>
+                                                </div>
+                                                <span class="grey_text content_item_caption">1</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <a href="#">
+                                                        <span class="circle on-hold"></span>On-Hold
+                                                    </a>
+                                                </div>
+                                                <span class="grey_text content_item_caption">2</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                <a href="#">
+                                                    <span class="circle dropped"></span>Dropped
+                                                </a>
+                                                </div>
+                                                <span class="grey_text content_item_caption">0</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <a href="#">
+                                                        <span class="circle plan-to-watch"></span>Plan to Watch
+                                                    </a>
+                                                </div>
+                                                <span class="grey_text content_item_caption">0</span>
+                                            </li>
+                                          </div>                                          
+                                        <div class="col d-flex flex-column justify-content-start">
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div class="content_item_caption">
+                                                  Total Entries
+                                                </div>
+                                                <span class="grey_text content_item_caption">20</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div class="content_item_caption">
+                                                    Reread
+                                                </div>
+                                                <span class="grey_text content_item_caption">0</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div class="content_item_caption">
+                                                    Chapters
+                                                </div>
+                                                <span class="grey_text content_item_caption">160</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div class="content_item_caption">
+                                                    Volumes
+                                                </div>
+                                                <span class="grey_text content_item_caption">14</span>
+                                            </li>
                                         </div>
                                     </div>
                                 </div>
