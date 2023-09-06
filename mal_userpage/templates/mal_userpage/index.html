@@ -45,10 +45,12 @@
             </h1>
             <div class="container">
                 <div class="d-flex flex-row main-row">
-                    <div class="col left-column">
-                        <img src="https://cdn.myanimelist.net/s/common/userimages/809c4c22-7a15-4866-9bd9-9ab1b74f00a4_225w?s=859f8fb3071ac92c9e3762efc36804a8">
+                    <div class="left-column d-flex flex-column">
+                        <div id="profilepic-leftcolumn">
+                            <img src="https://cdn.myanimelist.net/s/common/userimages/809c4c22-7a15-4866-9bd9-9ab1b74f00a4_225w?s=859f8fb3071ac92c9e3762efc36804a8">
+                        </div>
                     </div>
-                    <div class="col flex-grow right-column">
+                    <div class="right-column">
                         <h2>Statistics</h2>
                         <div class="row">
                             <div class="col">
@@ -63,10 +65,33 @@
                                         </div>
                                     </div>
                                     <div class="progress-bar">
-                                        <div class="progress-bar-fill" style="width: 70%;"></div>
+                                        <!-- <div class="progress-bar-fill" style="width: 70%;"></div> -->
+                                        <div class="watching" style="width: 24%;"></div>
+                                        <div class="completed" style="width: 48%;"></div>
+                                        <div class="on-hold" style="width: 0;"></div>
+                                        <div class="dropped" style="width: 3%;"></div>
+                                        <div class="plan-to-watch" style="width: 25%;"></div>
                                     </div>
-                                    <div class="row">
+                                    <div class="row legend">
                                         <div class="col">
+                                            <li><span class="circle watching"></span> Watching 24</li>
+                                            <li><span class="circle completed"></span> Completed 48</li>
+                                            <li><span class="circle on-hold"></span> On-Hold 0</li>
+                                            <li><span class="circle dropped"></span> Dropped 3</li>
+                                            <li><span class="circle plan-to-watch"></span> Plan to Watch 30</li>
+                                        </div>
+                                        <div class="col">
+                                            <div>
+                                                Total Entries
+                                            </div>
+                                            <div>
+                                                Rewatched
+                                            </div>
+                                            <div>
+                                                Episodes
+                                            </div>
+                                        </div>
+                                        <!-- <div class="col">
                                             <div>
                                                 Watching
                                             </div>
@@ -82,18 +107,8 @@
                                             <div>
                                                 Plan to Watch
                                             </div>
-                                        </div>
-                                        <div class="col">
-                                            <div>
-                                                Total Entries
-                                            </div>
-                                            <div>
-                                                Rewatched
-                                            </div>
-                                            <div>
-                                                Episodes
-                                            </div>
-                                        </div>
+                                        
+                                         -->
                                     </div>
                                 </div>
                                 <div class="Manga_stats">

@@ -45,27 +45,18 @@ h1 {
 }
 
 .left-column {
-    width: 224px;
-    border: 0px 1.333px 0px 0px;
+    width: 225px;
 }
-    
+
+#profilepic-leftcolumn {
+    padding: 8px 8px 8px 0;
+}
+
+#profilepic-leftcolumn img {
+    max-width: 100%;
+}
+
 .right-column {
-}
-
-.progress-bar {
-    width: 100%;
-    background-color: #747474 !important;
-    height: 20px;
-    border-radius: 2.5px;
-}
-
-.progress-bar-fill {
-    background-color: #338543 !important;
-    height: 20px;
-    height: 100%;
-    border-radius: 2.5px;
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
 }
 
 .content_item {
@@ -102,6 +93,77 @@ h1 {
     border-radius: 0;
 }
 
+.progress-bar {
+    width: 100%;
+    background-color: #747474 !important;
+    height: 20px;
+    border-radius: 2.5px;
+}
+
+/* .progress-bar .watching,
+.progress-bar .completed,
+.progress-bar .on-hold,
+.progress-bar .dropped,
+.progress-bar .plan-to-watch {
+    background-color: #338543 !important;
+    height: 20px;
+    height: 100%;
+    border-radius: 2.5px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+} */
+
+.watching {
+    background-color: red;
+}
+  
+.completed {
+    background-color: green;
+}
+  
+.on-hold {
+    background-color: blue;
+}
+  
+.dropped {
+    background-color: yellow;
+}
+  
+.plan-to-watch {
+    background-color: orange;
+}
+  
+  .circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+.legend {
+    list-style-type: none;
+}
+
+.legend .watching {
+    background-color: #338543;
+}
+
+.legend .completed {
+    background-color: #2d4276;
+}
+
+.legend .on-hold {
+    background-color: #c9a31f;
+}
+
+.legend .dropped {
+    background-color: #832f30;
+}
+
+.legend .plan-to-watch {
+    background-color: #747474;
+}
 /* 
 234
 808
