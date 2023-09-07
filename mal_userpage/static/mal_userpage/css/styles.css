@@ -35,24 +35,25 @@ body {
 
 h1 {
     color: #e0e0e0 !important;
-    font-family: Verdana,Arial;
-    font-size: 16px;
-    font-weight: 700;
+    font-family: Verdana,Arial !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
 }
 
 h2 {
-    font-family: Avenir,lucida grande,tahoma,verdana,arial,sans-serif;
-    font-size: 14px;
-    font-weight: 700;
+    font-family: Avenir,lucida grande,tahoma,verdana,arial,sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
 }
 
 h5 {
-    font-family: Avenir,lucida grande,tahoma,verdana,arial,sans-serif;
-    font-size: 14px;
-    font-weight: 400;
+    font-family: Avenir,lucida grande,tahoma,verdana,arial,sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
 }
 
 .dropdown button strong {
+    font-family: Verdana,Arial;
     font-size: 14px;
     font-weight: 700;
 }
@@ -201,7 +202,9 @@ h5 {
 
 .legend .col li a,
 .Last_anime_updates a,
-.Last_manga_updates a {
+.Last_manga_updates a,
+#comments a,
+#favorites a{
     color: #abc4ed;
     text-decoration: none;
     font-family: Verdana,Arial;
@@ -210,7 +213,9 @@ h5 {
 
 .legend a:hover, 
 .Last_anime_updates a:hover,
-.Last_manga_updates a:hover {
+.Last_manga_updates a:hover, 
+#comments a:hover,
+#favorites a:hover{
     text-decoration: underline !important;
 }
 
@@ -253,7 +258,25 @@ h5 {
     margin: 12px -8px 0px -8px;
 }
 
-/* 
-234
-808
-*/
+#anime-favorites img,
+#character-favorites img {
+    margin: 2px;
+}
+
+#submit-comment {
+    width: 160px;
+    height: 22px;
+    font-size: 12px;
+    text-align: center;
+    font-family: lucida grande,tahoma,verdana,arial,sans-serif;
+    font-weight: 700;
+    border-radius: 2px;
+    background-color: #4065ba;
+    border: none;
+    padding: 0;
+    margin: 2px 0 80px 0;
+}
+
+.font-12 {
+    font-size: 12px !important;
+}
