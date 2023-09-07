@@ -1,0 +1,29 @@
+[
+    {
+        "model": "mal_userpage.animestats",
+        "fields": {
+            "Watching": 24,
+            "Completed": 48,
+            "OnHold": 0,
+            "Dropped": 3,
+            "PlanToWatch": 30,
+            "TotalEntries": 105,
+            "Rewatched": 1,
+            "Episodes": 663
+        }
+    },
+    {
+        "model": "mal_userpage.mangastats",
+        "fields": {
+            "Reading": 17,
+            "Completed": 1,
+            "OnHold": 2,
+            "Dropped": 0,
+            "PlanToWatch": 0,
+            "TotalEntries": 20,
+            "Reread": 0,
+            "Chapters": 160,
+            "Volumes": 14
+        }
+    }
+]

@@ -19,3 +19,30 @@ class Manga(models.Model):
 
     def __str__(self):
         return self.name
+
+class AnimeStats(models.Model):
+    Watching = models.IntegerField(default=0)
+    Completed = models.IntegerField(default=0)
+    OnHold = models.IntegerField(default=0)
+    Dropped = models.IntegerField(default=0)
+    PlanToWatch = models.IntegerField(default=0)
+    TotalEntries = models.IntegerField(default=0)
+    Rewatched = models.IntegerField(default=0)
+    Episodes = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.name
+
+class MangaStats(models.Model):
+    Reading = models.IntegerField(default=0)
+    Completed = models.IntegerField(default=0)
+    OnHold = models.IntegerField(default=0)
+    Dropped = models.IntegerField(default=0)
+    PlanToWatch = models.IntegerField(default=0)
+    TotalEntries = models.IntegerField(default=0)
+    Reread = models.IntegerField(default=0)
+    Chapters = models.IntegerField(default=0)
+    Volumes = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.name

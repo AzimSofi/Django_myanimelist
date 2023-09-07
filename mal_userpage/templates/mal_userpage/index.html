@@ -16,7 +16,7 @@
         <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
         <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
     </head>
-    <body>
+    <body>    
         <div class="profile_container">
             <header>
                 <div class="mt- mb-2 d-flex justify-content-between align-items-center">
@@ -83,7 +83,7 @@
                                                         <span class="circle watching"></span>Watching
                                                     </a>
                                                 </div>
-                                                <span class="grey_text content_item_caption">24</span>
+                                                <span class="grey_text content_item_caption">{{ animestats.Watching }}</span>
                                             </li>
                                             <li class="d-flex justify-content-between align-items-center">
                                                 <div>
@@ -91,7 +91,7 @@
                                                         <span class="circle completed"></span>Completed
                                                     </a>
                                                 </div>
-                                                <span class="grey_text content_item_caption">48</span>
+                                                <span class="grey_text content_item_caption">{{ animestats.Completed }}</span>
                                             </li>
                                             <li class="d-flex justify-content-between align-items-center">
                                                 <div>
@@ -99,7 +99,7 @@
                                                         <span class="circle on-hold"></span>On-Hold
                                                     </a>
                                                 </div>
-                                                <span class="grey_text content_item_caption">0</span>
+                                                <span class="grey_text content_item_caption">{{ animestats.OnHold }}</span>
                                             </li>
                                             <li class="d-flex justify-content-between align-items-center">
                                                 <div>
@@ -107,7 +107,7 @@
                                                     <span class="circle dropped"></span>Dropped
                                                 </a>
                                                 </div>
-                                                <span class="grey_text content_item_caption">3</span>
+                                                <span class="grey_text content_item_caption">{{ animestats.Dropped }}</span>
                                             </li>
                                             <li class="d-flex justify-content-between align-items-center">
                                                 <div>
@@ -115,7 +115,7 @@
                                                         <span class="circle plan-to-watch"></span>Plan to Watch
                                                     </a>
                                                 </div>
-                                                <span class="grey_text content_item_caption">30</span>
+                                                <span class="grey_text content_item_caption">{{ animestats.PlanToWatch }}</span>
                                             </li>
                                           </div>                                          
                                         <div class="col d-flex flex-column justify-content-start">
@@ -123,19 +123,19 @@
                                                 <div class="content_item_caption ms-5">
                                                   Total Entries
                                                 </div>
-                                                <span class="grey_text content_item_caption">105</span>
+                                                <span class="grey_text content_item_caption">{{ animestats.TotalEntries }}</span>
                                             </li>
                                             <li class="d-flex justify-content-between align-items-center">
                                                 <div class="content_item_caption ms-5">
                                                     Rewatched
                                                 </div>
-                                                <span class="grey_text content_item_caption">1</span>
+                                                <span class="grey_text content_item_caption">{{ animestats.Rewatched }}</span>
                                             </li>
                                             <li class="d-flex justify-content-between align-items-center">
                                                 <div class="content_item_caption ms-5">
                                                     Episodes
                                                 </div>
-                                                <span class="grey_text content_item_caption">663</span>
+                                                <span class="grey_text content_item_caption">{{ animestats.Episodes }}</span>
                                             </li>
                                         </div>
                                     </div>
@@ -165,7 +165,7 @@
                                                         <span class="circle watching"></span>Reading
                                                     </a>
                                                 </div>
-                                                <span class="grey_text content_item_caption">17</span>
+                                                <span class="grey_text content_item_caption">{{ mangastats.Reading }}</span>
                                             </li>
                                             <li class="d-flex justify-content-between align-items-center">
                                                 <div>
@@ -173,7 +173,7 @@
                                                         <span class="circle completed"></span>Completed
                                                     </a>
                                                 </div>
-                                                <span class="grey_text content_item_caption">1</span>
+                                                <span class="grey_text content_item_caption">{{ mangastats.Completed }}</span>
                                             </li>
                                             <li class="d-flex justify-content-between align-items-center">
                                                 <div>
@@ -181,7 +181,7 @@
                                                         <span class="circle on-hold"></span>On-Hold
                                                     </a>
                                                 </div>
-                                                <span class="grey_text content_item_caption">2</span>
+                                                <span class="grey_text content_item_caption">{{ mangastats.OnHold }}</span>
                                             </li>
                                             <li class="d-flex justify-content-between align-items-center">
                                                 <div>
@@ -189,7 +189,7 @@
                                                     <span class="circle dropped"></span>Dropped
                                                 </a>
                                                 </div>
-                                                <span class="grey_text content_item_caption">0</span>
+                                                <span class="grey_text content_item_caption">{{ mangastats.Dropped }}</span>
                                             </li>
                                             <li class="d-flex justify-content-between align-items-center">
                                                 <div>
@@ -197,7 +197,7 @@
                                                         <span class="circle plan-to-watch"></span>Plan to Watch
                                                     </a>
                                                 </div>
-                                                <span class="grey_text content_item_caption">0</span>
+                                                <span class="grey_text content_item_caption">{{ mangastats.PlanToWatch }}</span>
                                             </li>
                                           </div>                                          
                                         <div class="col d-flex flex-column justify-content-start">
@@ -205,25 +205,25 @@
                                                 <div class="content_item_caption ms-5">
                                                   Total Entries
                                                 </div>
-                                                <span class="grey_text content_item_caption">20</span>
+                                                <span class="grey_text content_item_caption">{{ mangastats.TotalEntries }}</span>
                                             </li>
                                             <li class="d-flex justify-content-between align-items-center">
                                                 <div class="content_item_caption ms-5">
                                                     Reread
                                                 </div>
-                                                <span class="grey_text content_item_caption">0</span>
+                                                <span class="grey_text content_item_caption">{{ mangastats.Reread }}</span>
                                             </li>
                                             <li class="d-flex justify-content-between align-items-center">
                                                 <div class="content_item_caption ms-5">
                                                     Chapters
                                                 </div>
-                                                <span class="grey_text content_item_caption">160</span>
+                                                <span class="grey_text content_item_caption">{{ mangastats.Chapters }}</span>
                                             </li>
                                             <li class="d-flex justify-content-between align-items-center">
                                                 <div class="content_item_caption ms-5">
                                                     Volumes
                                                 </div>
-                                                <span class="grey_text content_item_caption">14</span>
+                                                <span class="grey_text content_item_caption">{{ mangastats.Volumes }}</span>
                                             </li>
                                         </div>
                                     </div>
