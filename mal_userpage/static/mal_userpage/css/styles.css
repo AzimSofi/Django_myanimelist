@@ -200,8 +200,8 @@ h5 {
 }
 
 .legend .col li a,
-.Last_anime_updates .d-flex .col a,
-.Last_manga_updates .d-flex .col a {
+.Last_anime_updates a,
+.Last_manga_updates a {
     color: #abc4ed;
     text-decoration: none;
     font-family: Verdana,Arial;
@@ -250,8 +250,9 @@ h5 {
 
 .Anime_stats .legend,
 .Manga_stats .legend {
-    margin: 12px 8px 0px 8px;
+    margin: 12px -8px 0px -8px;
 }
+
 /* 
 234
 808
