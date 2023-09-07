@@ -19,7 +19,7 @@
     <body>
         <div class="profile_container">
             <header>
-                <div class="mt-2 mb-2 d-flex justify-content-between align-items-center">
+                <div class="mt- mb-2 d-flex justify-content-between align-items-center">
                     <div>
                         <img height="48px" src="https://cdn.myanimelist.net/images/mal-logo-xsmall-white@2x.png?v=1634263200">
                     </div>
@@ -44,7 +44,7 @@
                 <a href="#services">サービス</a>
                 <a href="#contact">コンタクト</a>
             </div>
-            <h1 class="mt-2">
+            <h1 class="mt-2" id="profile_header-3">
                 {{ name }}'s profile
             </h1>
             <div class="container">
@@ -54,7 +54,7 @@
                             <img src="https://cdn.myanimelist.net/s/common/userimages/809c4c22-7a15-4866-9bd9-9ab1b74f00a4_225w?s=859f8fb3071ac92c9e3762efc36804a8">
                         </div>
                     </div>
-                    <div class="right-column flex-fill mt-4 ms-3">
+                    <div class="right-column flex-fill mt-4">
                         <h2 class="mt-5">Statistics</h2>
                         <div class="row ">
                             <div class="col">
@@ -62,13 +62,13 @@
                                     <h5>Anime Stats</h5>
                                     <div class="row">
                                         <div class="col content_item_caption font-12">
-                                            Days: <strong class="grey_text">11.0</strong>
+                                            Days:&nbsp;<strong class="grey_text">11.0</strong>
                                         </div>
-                                        <div class="col content_item_caption font-12">
-                                            Mean Score: <strong class="grey_text">5.35</strong>
+                                        <div class="col text-right content_item_caption font-12" style="justify-content: flex-end;">
+                                            Mean Score:&nbsp;<strong class="grey_text">5.35</strong>
                                         </div>
                                     </div>
-                                    <div class="progress-bar">
+                                    <div class="progress-bar mt-1">
                                         <!-- <div class="progress-bar-fill" style="width: 70%;"></div> -->
                                         <div class="watching" style="width: 24%;"></div>
                                         <div class="completed" style="width: 48%;"></div>
@@ -121,19 +121,19 @@
                                           </div>                                          
                                         <div class="col d-flex flex-column justify-content-start">
                                             <li class="d-flex justify-content-between align-items-center">
-                                                <div class="content_item_caption">
+                                                <div class="content_item_caption ms-5">
                                                   Total Entries
                                                 </div>
                                                 <span class="grey_text content_item_caption">105</span>
                                             </li>
                                             <li class="d-flex justify-content-between align-items-center">
-                                                <div class="content_item_caption">
+                                                <div class="content_item_caption ms-5">
                                                     Rewatched
                                                 </div>
                                                 <span class="grey_text content_item_caption">1</span>
                                             </li>
                                             <li class="d-flex justify-content-between align-items-center">
-                                                <div class="content_item_caption">
+                                                <div class="content_item_caption ms-5">
                                                     Episodes
                                                 </div>
                                                 <span class="grey_text content_item_caption">663</span>
@@ -145,13 +145,13 @@
                                     <h5>Manga Stats</h5>
                                     <div class="row">
                                         <div class="col content_item_caption font-12">
-                                            Days: <strong class="grey_text">2.0</strong>
+                                            Days:&nbsp;<strong class="grey_text">2.0</strong>
                                         </div>
-                                        <div class="col content_item_caption font-12">
-                                            Mean Score: <strong class="grey_text">5.50</strong>
+                                        <div class="col content_item_caption font-12"  style="justify-content: flex-end;">
+                                            Mean Score:&nbsp;<strong class="grey_text">5.50</strong>
                                         </div>
                                     </div>
-                                    <div class="progress-bar">
+                                    <div class="progress-bar mt-1">
                                         <div class="progress-bar-fill" style="width: 70%;"></div>
                                     </div>
                                     <div class="row legend">
@@ -199,25 +199,25 @@
                                           </div>                                          
                                         <div class="col d-flex flex-column justify-content-start">
                                             <li class="d-flex justify-content-between align-items-center">
-                                                <div class="content_item_caption">
+                                                <div class="content_item_caption ms-5">
                                                   Total Entries
                                                 </div>
                                                 <span class="grey_text content_item_caption">20</span>
                                             </li>
                                             <li class="d-flex justify-content-between align-items-center">
-                                                <div class="content_item_caption">
+                                                <div class="content_item_caption ms-5">
                                                     Reread
                                                 </div>
                                                 <span class="grey_text content_item_caption">0</span>
                                             </li>
                                             <li class="d-flex justify-content-between align-items-center">
-                                                <div class="content_item_caption">
+                                                <div class="content_item_caption ms-5">
                                                     Chapters
                                                 </div>
                                                 <span class="grey_text content_item_caption">160</span>
                                             </li>
                                             <li class="d-flex justify-content-between align-items-center">
-                                                <div class="content_item_caption">
+                                                <div class="content_item_caption ms-5">
                                                     Volumes
                                                 </div>
                                                 <span class="grey_text content_item_caption">14</span>
@@ -228,12 +228,11 @@
                             </div>
                             <div class="col">
                                 <div class="Last_anime_updates">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <h5>Last Anime Updates</h5>
+                                    <div class="d-flex justify-content-between align-items-center border_mal">
+                                        <h5 style="margin-bottom: 0px; border-style:none">Last Anime Updates</h5>
                                         <span><a href="#">Anime history</a></span>
                                     </div>
-                                    
-                                    <div class="mb-2 d-flex align-items-start">
+                                    <div class="mb-2 mt-2 d-flex align-items-start">
                                         <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/anime/1491/132864.webp?s=bf8969abc40221f2202d481e3c15f6a0">
                                         <div class="col">
                                             <a href="#">Spy Kyoushitsu</a>
@@ -280,8 +279,10 @@
                                     </div>
                                 </div>
                                 <div class="Last_manga_updates mt-4">
-                                    <h5>Last Manga Updates</h5>
-                                    <div class="mb-2 d-flex align-items-start">
+                                    <div class="d-flex justify-content-between align-items-center border_mal">
+                                        <h5 style="margin-bottom: 0px; border-style:none">Last Manga Updates</h5>
+                                    </div>
+                                    <div class="mb-2 mt-2 d-flex align-items-start">
                                         <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/manga/3/136045.webp?s=3e6ebd7ce5b0acaed3d53a157f17a28b">
                                         <div class="col">
                                             <a href="#">Karakai Jouzu no Takagi-san</a>

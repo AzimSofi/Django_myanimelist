@@ -32,6 +32,18 @@ body {
     min-height: 100vh; /* 垂直方向にページ全体を占める */
 }
 
+.border_mal {
+    border-color: #222;
+    border-style: solid;
+    border-width: 0 0 1px;
+    border: #a3a3a3;
+}
+
+#profile_header-3 {
+    background-color: #222;
+    margin: 0 !important;
+    padding: 8px 0 8px 8px;
+}
 
 h1 {
     color: #e0e0e0 !important;
@@ -44,12 +56,20 @@ h2 {
     font-family: Avenir,lucida grande,tahoma,verdana,arial,sans-serif !important;
     font-size: 14px !important;
     font-weight: 700 !important;
+
+    border-color: #222;
+    border-style: solid;
+    border-width: 0 0 1px;
 }
 
 h5 {
     font-family: Avenir,lucida grande,tahoma,verdana,arial,sans-serif !important;
     font-size: 14px !important;
     font-weight: 400 !important;
+
+    border-color: #222;
+    border-style: solid;
+    border-width: 0 0 1px;
 }
 
 .dropdown button strong {
@@ -83,6 +103,10 @@ h5 {
 }
 
 .right-column {
+    border-color: #222;
+    border-style: solid;
+    border-width: 0 0 0 1px;
+    padding-left: 8px;
 }
 
 .content_item {
