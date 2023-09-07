@@ -35,7 +35,7 @@ body {
 .border_mal {
     border-color: #222;
     border-style: solid;
-    border-width: 0 0 1px;
+    border-width: 0 0 1px 0;
     border: #a3a3a3;
 }
 
@@ -146,9 +146,11 @@ h5 {
 }
 
 .progress-bar {
-    width: 100%;
+    width: 380px;
     background-color: #747474 !important;
     height: 20px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
 .progress-bar-fill {
@@ -163,57 +165,50 @@ h5 {
     border-radius: 2.5px;
 }
 
-.Last_anime_updates .d-flex .col .progress-bar .progress-bar-fill,
-.Last_manga_updates .d-flex .col .progress-bar .progress-bar-fill{
+.Last_anime_updates .progress-bar .progress-bar-fill,
+.Last_manga_updates .progress-bar .progress-bar-fill{
     width: 190px;
     height: 10px;
     border-radius: 2.5px;
 }
 
-/* .progress-bar .watching,
+.progress-bar .watching,
 .progress-bar .completed,
 .progress-bar .on-hold,
 .progress-bar .dropped,
 .progress-bar .plan-to-watch {
-    background-color: #338543 !important;
     height: 20px;
     height: 100%;
-    border-radius: 2.5px;
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
-} */
+}
 
+.Anime_stats .progress-bar,
 .Manga_stats .progress-bar {
     border-radius: 2.5px;
-    height: 100%;
 }
 
-.Anime_stats .progress-bar {
-    border-radius: 2.5px;
-}
-
-.Manga_stats .progress-bar-fill {
+.Manga_stats .progress-bar-fill,
+.Anime_stats .progress-bar-fill {
     height: 18px;
 }
 
 .watching {
-    background-color: red;
+    background-color: #338543;
 }
   
 .completed {
-    background-color: green;
+    background-color: #2d4276;
 }
   
 .on-hold {
-    background-color: blue;
+    background-color: #c9a31f;
 }
   
 .dropped {
-    background-color: yellow;
+    background-color: #832f30;
 }
   
 .plan-to-watch {
-    background-color: orange;
+    background-color: #747474;
 }
   
 .circle {
