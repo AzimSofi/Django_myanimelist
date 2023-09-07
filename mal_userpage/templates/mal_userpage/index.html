@@ -12,9 +12,9 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
         <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
-        <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
-        <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
-        <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+        <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+        <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+        
     </head>
     <body>
         <div class="profile_container">
@@ -52,6 +52,7 @@
                     <div class="left-column d-flex flex-column">
                         <div id="profilepic-leftcolumn">
                             <img src="https://cdn.myanimelist.net/s/common/userimages/809c4c22-7a15-4866-9bd9-9ab1b74f00a4_225w?s=859f8fb3071ac92c9e3762efc36804a8">
+                            <i class="fa-solid fa-comment fa-bounce" style="color: #11d1df;"></i>                       
                         </div>
                     </div>
                     <div class="right-column flex-fill mt-4">
