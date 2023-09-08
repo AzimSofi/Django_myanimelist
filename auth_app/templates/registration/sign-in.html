@@ -1,0 +1,40 @@
+{% load static %}
+<!doctype html>
+<html lang="ja" data-bs-theme="auto">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Signin Template · Bootstrap v5.3</title>
+
+		<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+		<link href="{% static 'auth_app/bootstrap.min.css' %}" rel="stylesheet">
+		<link href="{% static 'auth_app/sign-in.css' %}" rel="stylesheet">
+
+	</head>
+	<body>
+	<main class="form-signin w-100 m-auto">
+		<form method="post">
+			{% csrf_token %}
+			<h1 class="h3 mb-3 fw-normal">ようこそ</h1>
+	
+			<div class="form-floating">
+				<input type="text" name="username" class="form-control" id="floatingInput" placeholder="Username" required>
+				<label for="floatingInput">メールアドレス</label>
+			</div>
+			<div class="form-floating">
+				<input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+				<label for="floatingPassword">パスワード</label>
+			</div>
+			<!-- <div class="form-check text-start my-3">
+				<input class="form-check-input" type="checkbox" name="remember_me" id="flexCheckDefault">
+				<label class="form-check-label" for="flexCheckDefault">
+					Remember me
+				</label>
+			</div> -->
+			<button class="btn btn-primary w-100 py-2" type="submit">ログイン</button>
+		</form>
+	</main>
+	</body>
+</html>
