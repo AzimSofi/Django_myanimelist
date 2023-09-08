@@ -32,27 +32,48 @@ body {
     min-height: 100vh; /* 垂直方向にページ全体を占める */
 }
 
+.border_mal {
+    border-color: #222;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border: #a3a3a3;
+}
+
+#profile_header-3 {
+    background-color: #222;
+    margin: 0 !important;
+    padding: 8px 0 8px 8px;
+}
 
 h1 {
     color: #e0e0e0 !important;
-    font-family: Verdana,Arial;
-    font-size: 16px;
-    font-weight: 700;
+    font-family: Verdana,Arial !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
 }
 
 h2 {
-    font-family: Avenir,lucida grande,tahoma,verdana,arial,sans-serif;
-    font-size: 14px;
-    font-weight: 700;
+    font-family: Avenir,lucida grande,tahoma,verdana,arial,sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+
+    border-color: #222;
+    border-style: solid;
+    border-width: 0 0 1px;
 }
 
 h5 {
-    font-family: Avenir,lucida grande,tahoma,verdana,arial,sans-serif;
-    font-size: 14px;
-    font-weight: 400;
+    font-family: Avenir,lucida grande,tahoma,verdana,arial,sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+
+    border-color: #222;
+    border-style: solid;
+    border-width: 0 0 1px;
 }
 
 .dropdown button strong {
+    font-family: Verdana,Arial;
     font-size: 14px;
     font-weight: 700;
 }
@@ -82,6 +103,10 @@ h5 {
 }
 
 .right-column {
+    border-color: #222;
+    border-style: solid;
+    border-width: 0 0 0 1px;
+    padding-left: 8px;
 }
 
 .content_item {
@@ -121,9 +146,11 @@ h5 {
 }
 
 .progress-bar {
-    width: 100%;
+    width: 380px;
     background-color: #747474 !important;
     height: 20px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
 .progress-bar-fill {
@@ -138,57 +165,50 @@ h5 {
     border-radius: 2.5px;
 }
 
-.Last_anime_updates .d-flex .col .progress-bar .progress-bar-fill,
-.Last_manga_updates .d-flex .col .progress-bar .progress-bar-fill{
+.Last_anime_updates .progress-bar .progress-bar-fill,
+.Last_manga_updates .progress-bar .progress-bar-fill{
     width: 190px;
     height: 10px;
     border-radius: 2.5px;
 }
 
-/* .progress-bar .watching,
+.progress-bar .watching,
 .progress-bar .completed,
 .progress-bar .on-hold,
 .progress-bar .dropped,
 .progress-bar .plan-to-watch {
-    background-color: #338543 !important;
     height: 20px;
     height: 100%;
-    border-radius: 2.5px;
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
-} */
+}
 
+.Anime_stats .progress-bar,
 .Manga_stats .progress-bar {
     border-radius: 2.5px;
-    height: 100%;
 }
 
-.Anime_stats .progress-bar {
-    border-radius: 2.5px;
-}
-
-.Manga_stats .progress-bar-fill {
+.Manga_stats .progress-bar-fill,
+.Anime_stats .progress-bar-fill {
     height: 18px;
 }
 
 .watching {
-    background-color: red;
+    background-color: #338543;
 }
   
 .completed {
-    background-color: green;
+    background-color: #2d4276;
 }
   
 .on-hold {
-    background-color: blue;
+    background-color: #c9a31f;
 }
   
 .dropped {
-    background-color: yellow;
+    background-color: #832f30;
 }
   
 .plan-to-watch {
-    background-color: orange;
+    background-color: #747474;
 }
   
 .circle {
@@ -196,23 +216,26 @@ h5 {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    margin-right: 5px;
+    margin-right: 12px;
 }
 
-
 .legend .col li a,
-.Last_anime_updates .d-flex .col a,
-.Last_manga_updates .d-flex .col a {
+.Last_anime_updates a,
+.Last_manga_updates a,
+#comments a,
+#favorites a{
     color: #abc4ed;
     text-decoration: none;
     font-family: Verdana,Arial;
     font-size: 11px;
 }
 
-.col a:hover, 
-.Last_anime_updates .row .col a:hover,
-.Last_manga_updates .row .col a:hover {
-    text-decoration: underline;
+.legend a:hover, 
+.Last_anime_updates a:hover,
+.Last_manga_updates a:hover, 
+#comments a:hover,
+#favorites a:hover{
+    text-decoration: underline !important;
 }
 
 .content_item_caption {
@@ -249,14 +272,30 @@ h5 {
     background-color: #747474;
 }
 
-.Anime_stats .legend {
-    margin: 12px 8px 0px 8px;
+.Anime_stats .legend,
+.Manga_stats .legend {
+    margin: 12px -8px 0px -8px;
 }
-/* 
-234
-808
-*/
 
-#user-function-col{
-    border: #c9a31fl 1px solid;
+#anime-favorites img,
+#character-favorites img {
+    margin: 2px;
+}
+
+#submit-comment {
+    width: 160px;
+    height: 22px;
+    font-size: 12px;
+    text-align: center;
+    font-family: lucida grande,tahoma,verdana,arial,sans-serif;
+    font-weight: 700;
+    border-radius: 2px;
+    background-color: #4065ba;
+    border: none;
+    padding: 0;
+    margin: 2px 0 80px 0;
+}
+
+.font-12 {
+    font-size: 12px !important;
 }

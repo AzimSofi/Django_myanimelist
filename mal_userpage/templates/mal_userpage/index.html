@@ -11,11 +11,15 @@
         <!-- bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+        <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
     </head>
-    <body>
+    <body>    
         <div class="profile_container">
             <header>
-                <div class="mt-2 mb-2 d-flex justify-content-between align-items-center">
+                <div class="mt- mb-2 d-flex justify-content-between align-items-center">
                     <div>
                         <img height="48px" src="https://cdn.myanimelist.net/images/mal-logo-xsmall-white@2x.png?v=1634263200">
                     </div>
@@ -40,7 +44,7 @@
                 <a href="#services">サービス</a>
                 <a href="#contact">コンタクト</a>
             </div>
-            <h1>
+            <h1 class="mt-2" id="profile_header-3">
                 {{ name }}'s profile
             </h1>
             <div class="container">
@@ -56,190 +60,261 @@
                             <a id="user-function-col"> <i class="fa-solid fa-gift"></i> </a>
                         </div>
                     </div>
-                    <div class="right-column flex-fill">
-                        <h2>Statistics</h2>
+                    <div class="right-column flex-fill mt-4">
+                        <h2 class="mt-5">Statistics</h2>
                         <div class="row ">
                             <div class="col">
-                                <div class="Anime_stats">
+                                <div class="Anime_stats mt-3">
                                     <h5>Anime Stats</h5>
                                     <div class="row">
-                                        <div class="col">
-                                            Days: <strong>11.0</strong>
+                                        <div class="col content_item_caption font-12">
+                                            Days:&nbsp;<strong class="grey_text">11.0</strong>
                                         </div>
-                                        <div class="col">
-                                            Mean Score: <strong>5.35</strong>
+                                        <div class="col text-right content_item_caption font-12" style="justify-content: flex-end;">
+                                            Mean Score:&nbsp;<strong class="grey_text">5.35</strong>
                                         </div>
                                     </div>
-                                    <div class="progress-bar">
-                                        <!-- <div class="progress-bar-fill" style="width: 70%;"></div> -->
-                                        <div class="watching" style="width: 24%;"></div>
-                                        <div class="completed" style="width: 48%;"></div>
-                                        <div class="on-hold" style="width: 0;"></div>
-                                        <div class="dropped" style="width: 3%;"></div>
+                                    <div class="progress-bar mt-1 row">
+                                        <div class="watching" style="width: 20%;"></div>
+                                        <div class="completed" style="width: 50%;"></div>
+                                        <div class="on-hold" style="width: 0%;"></div>
+                                        <div class="dropped" style="width: 5%;"></div>
                                         <div class="plan-to-watch" style="width: 25%;"></div>
                                     </div>
                                     <div class="row legend">
                                         <div class="col">
-                                            <li><span class="circle watching"></span> <a href="#">Watching</a> 24</li>
-                                            <li><span class="circle completed"></span> <a href="#">Completed</a> 48</li>
-                                            <li><span class="circle on-hold"></span> <a href="#">On-Hold</a> 0</li>
-                                            <li><span class="circle dropped"></span> <a href="#">Dropped</a> 3</li>
-                                            <li><span class="circle plan-to-watch"></span> <a href="#">Plan to Watch</a> 30</li>
-                                        </div>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <a href="#">
+                                                        <span class="circle watching"></span>Watching
+                                                    </a>
+                                                </div>
+                                                <span class="grey_text content_item_caption">{{ animestats.Watching }}</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <a href="#">
+                                                        <span class="circle completed"></span>Completed
+                                                    </a>
+                                                </div>
+                                                <span class="grey_text content_item_caption">{{ animestats.Completed }}</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <a href="#">
+                                                        <span class="circle on-hold"></span>On-Hold
+                                                    </a>
+                                                </div>
+                                                <span class="grey_text content_item_caption">{{ animestats.OnHold }}</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                <a href="#">
+                                                    <span class="circle dropped"></span>Dropped
+                                                </a>
+                                                </div>
+                                                <span class="grey_text content_item_caption">{{ animestats.Dropped }}</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <a href="#">
+                                                        <span class="circle plan-to-watch"></span>Plan to Watch
+                                                    </a>
+                                                </div>
+                                                <span class="grey_text content_item_caption">{{ animestats.PlanToWatch }}</span>
+                                            </li>
+                                          </div>                                          
                                         <div class="col d-flex flex-column justify-content-start">
-                                            <li class="content_item_caption">Total Entries</li>
-                                            <li class="content_item_caption">Rewatched</li>
-                                            <li class="content_item_caption">Episodes</li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div class="content_item_caption ms-5">
+                                                  Total Entries
+                                                </div>
+                                                <span class="grey_text content_item_caption">{{ animestats.TotalEntries }}</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div class="content_item_caption ms-5">
+                                                    Rewatched
+                                                </div>
+                                                <span class="grey_text content_item_caption">{{ animestats.Rewatched }}</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div class="content_item_caption ms-5">
+                                                    Episodes
+                                                </div>
+                                                <span class="grey_text content_item_caption">{{ animestats.Episodes }}</span>
+                                            </li>
                                         </div>
-                                        <!-- <div class="col">
-                                            <div>
-                                                Watching
-                                            </div>
-                                            <div>
-                                                Completed
-                                            </div>
-                                            <div>
-                                                On-Hold
-                                            </div>
-                                            <div>
-                                                Dropped
-                                            </div>
-                                            <div>
-                                                Plan to Watch
-                                            </div>
-                                        
-                                         -->
                                     </div>
                                 </div>
-                                <div class="Manga_stats">
+                                <div class="Manga_stats mt-5">
                                     <h5>Manga Stats</h5>
                                     <div class="row">
-                                        <div class="col">
-                                            Days: <strong>2.0</strong>
+                                        <div class="col content_item_caption font-12">
+                                            Days:&nbsp;<strong class="grey_text">2.0</strong>
                                         </div>
-                                        <div class="col">
-                                            Mean Score: <strong>5.50</strong>
+                                        <div class="col content_item_caption font-12"  style="justify-content: flex-end;">
+                                            Mean Score:&nbsp;<strong class="grey_text">5.50</strong>
                                         </div>
                                     </div>
-                                    <div class="progress-bar">
-                                        <div class="progress-bar-fill" style="width: 70%;"></div>
+                                    <div class="progress-bar mt-1 row">
+                                        <div class="watching" style="width: 85%;"></div>
+                                        <div class="completed" style="width: 5%;"></div>
+                                        <div class="on-hold" style="width: 10;"></div>
+                                        <div class="dropped" style="width: 0%;"></div>
+                                        <div class="plan-to-watch" style="width: 25%;"></div>
                                     </div>
-                                    <div class="row">
+                                    <div class="row legend">
                                         <div class="col">
-                                            <div>
-                                                Reading
-                                            </div>
-                                            <div>
-                                                Completed
-                                            </div>
-                                            <div>
-                                                On-Hold
-                                            </div>
-                                            <div>
-                                                Dropped
-                                            </div>
-                                            <div>
-                                                Plan to Read
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div>
-                                                Total Entries
-                                            </div>
-                                            <div>
-                                                Reread
-                                            </div>
-                                            <div>
-                                                Chapters
-                                            </div>
-                                            <div>
-                                                Volumes
-                                            </div>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <a href="#">
+                                                        <span class="circle watching"></span>Reading
+                                                    </a>
+                                                </div>
+                                                <span class="grey_text content_item_caption">{{ mangastats.Reading }}</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <a href="#">
+                                                        <span class="circle completed"></span>Completed
+                                                    </a>
+                                                </div>
+                                                <span class="grey_text content_item_caption">{{ mangastats.Completed }}</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <a href="#">
+                                                        <span class="circle on-hold"></span>On-Hold
+                                                    </a>
+                                                </div>
+                                                <span class="grey_text content_item_caption">{{ mangastats.OnHold }}</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                <a href="#">
+                                                    <span class="circle dropped"></span>Dropped
+                                                </a>
+                                                </div>
+                                                <span class="grey_text content_item_caption">{{ mangastats.Dropped }}</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <a href="#">
+                                                        <span class="circle plan-to-watch"></span>Plan to Watch
+                                                    </a>
+                                                </div>
+                                                <span class="grey_text content_item_caption">{{ mangastats.PlanToWatch }}</span>
+                                            </li>
+                                          </div>                                          
+                                        <div class="col d-flex flex-column justify-content-start">
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div class="content_item_caption ms-5">
+                                                  Total Entries
+                                                </div>
+                                                <span class="grey_text content_item_caption">{{ mangastats.TotalEntries }}</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div class="content_item_caption ms-5">
+                                                    Reread
+                                                </div>
+                                                <span class="grey_text content_item_caption">{{ mangastats.Reread }}</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div class="content_item_caption ms-5">
+                                                    Chapters
+                                                </div>
+                                                <span class="grey_text content_item_caption">{{ mangastats.Chapters }}</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <div class="content_item_caption ms-5">
+                                                    Volumes
+                                                </div>
+                                                <span class="grey_text content_item_caption">{{ mangastats.Volumes }}</span>
+                                            </li>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="Last_anime_updates">
-                                    <h5>Last Anime Updates</h5>
-                                    <div class="mb-2 d-flex align-items-start">
-                                        <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/anime/1491/132864.webp?s=bf8969abc40221f2202d481e3c15f6a0">
-                                        <div class="col">
-                                            <a href="#">Spy Kyoushitsu</a>
-                                            <div class="progress-bar">
-                                                <div class="progress-bar-fill" style="width: 70%;"></div>
-                                            </div>
-                                            <div class="content_item_caption">
-                                                Watching 2/12 · Scored -
+                                    <div class="d-flex justify-content-between align-items-center border_mal">
+                                        <h5 style="margin-bottom: 0px; border-style:none">Last Anime Updates</h5>
+                                        <span><a href="#">Anime history</a></span>
+                                    </div>
+                                    {% for anime in animes %}
+                                        <div class="mb-2 d-flex align-items-start">
+                                            <img class="content_item" src="{{ anime.picture_url }}" alt="{{ anime.name }}">
+                                            <div class="col">
+                                                <a href="#">{{ anime.name }}</a>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="progress-bar">
+                                                        <div class="progress-bar-fill" style="width: 70%;"></div>
+                                                    </div>
+                                                    <span class="content_item_caption">Sep 4, 10:53 AM</span>
+                                                </div>
+                                                <div class="content_item_caption">
+                                                    Watching {{ anime.ep_watched }}/{{ anime.ep_total }} · Scored {{ anime.user_score }}
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-2 d-flex align-items-start">
-                                        <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/anime/1147/122444.webp?s=2a011186fe78cff6075b82c9f266d64c">
-                                        <div class="col">
-                                            <a href="#">Watashi no Shiawase na Kekkon</a>
-                                            <div class="progress-bar">
-                                                <div class="progress-bar-fill" style="width: 70%;"></div>
-                                            </div>
-                                            <div class="content_item_caption">
-                                                Watching 2/12 · Scored -
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-2 d-flex align-items-start">
-                                        <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/anime/1146/113477.webp?s=7851bfc5bbfd734954a45535abcc7377">
-                                        <div class="col">
-                                            <a href="#">Hige wo Soru. Soshite Joshikousei wo Hirou.</a>
-                                            <div class="progress-bar">
-                                                <div class="progress-bar-fill" style="width: 70%;"></div>
-                                            </div>
-                                            <div class="content_item_caption">
-                                                Watching 2/12 · Scored -
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {% endfor %}
                                 </div>
-                                <div class="Last_manga_updates">
-                                    <h5>Last Manga Updates</h5>
-                                    <div class="mb-2 d-flex align-items-start">
-                                        <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/manga/3/136045.webp?s=3e6ebd7ce5b0acaed3d53a157f17a28b">
-                                        <div class="col">
-                                            <a href="#">Karakai Jouzu no Takagi-san</a>
-                                            <div class="progress-bar">
-                                                <div class="progress-bar-fill" style="width: 70%;"></div>
-                                            </div>
-                                            <div class="content_item_caption">
-                                                Watching 2/12 · Scored -
+                                <div class="Last_manga_updates mt-4">
+                                    <div class="d-flex justify-content-between align-items-center border_mal">
+                                        <h5 style="margin-bottom: 0px; border-style:none">Last Manga Updates</h5>
+                                    </div>
+                                    {% for manga in mangas %}
+                                        <div class="mb-2 d-flex align-items-start">
+                                            <img class="content_item" src="{{ manga.picture_url }}" alt="{{ manga.name }}">
+                                            <div class="col">
+                                                <a href="#">{{ manga.name }}</a>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="progress-bar">
+                                                        <div class="progress-bar-fill" style="width: 70%;"></div>
+                                                    </div>
+                                                    <span class="content_item_caption">Sep 4, 10:53 AM</span>
+                                                </div>
+                                                <div class="content_item_caption">
+                                                    Watching {{ manga.ch_read }}/{{ manga.ch_total }} · Scored {{ manga.user_score }}
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-2 d-flex align-items-start">
-                                        <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/manga/3/216480.webp?s=86a401d7ca938cb62c11ecd129114def">
-                                        <div class="col">
-                                            <a href="#">Fukakai na Boku no Subete wo</a>
-                                            <div class="progress-bar">
-                                                <div class="progress-bar-fill" style="width: 70%;"></div>
-                                            </div>
-                                            <div class="content_item_caption">
-                                                Watching 2/12 · Scored -
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-2 d-flex align-items-start">
-                                        <img class="content_item" src="https://cdn.myanimelist.net/r/80x120/images/manga/3/188967.webp?s=1044d289764245f71761c7a256cda028">
-                                        <div class="col">
-                                            <a href="#">Kishuku Gakkou no Juliet</a>
-                                            <div class="progress-bar">
-                                                <div class="progress-bar-fill" style="width: 70%;"></div>
-                                            </div>
-                                            <div class="content_item_caption">
-                                                Watching 2/12 · Scored -
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {% endfor %}
                                 </div>
                             </div>
                         </div>
+                        <div id="favorites" class="d-flex justify-content-between align-items-end border_mal">
+                            <h2 class="">Favorites</h2>
+                            <span class="mb-2"><a href="#">All Favorites</a></span>
+                        </div>
+                        <h5 class="mt-3">Anime (1)</h5>
+                        <div id="anime-favorites container">
+                            <img class="col" width="72px" height="112px" src="https://cdn.myanimelist.net/r/140x220/images/anime/1146/113477.webp?s=d92ddfa7a16ca3eb93a4727818883f2f" alt="">
+                        </div>
+                        <h5 class="mt-3">Character (3)</h5>
+                        <div id="character-favorites">
+                            <img width="72px" height="112px" src="https://cdn.myanimelist.net/r/140x220/images/characters/5/486674.webp?s=fb186f58adeac6e5cc7e64273e845571" alt="">
+                            <img width="72px" height="112px" src="https://cdn.myanimelist.net/r/140x220/images/characters/9/444114.webp?s=677fe548688a12432897a273bff04f39" alt="">
+                            <img width="72px" height="112px" src="https://cdn.myanimelist.net/r/140x220/images/characters/8/437009.webp?s=eb60e19d9968d7d4ed5f507d620fa037" alt="">
+                        </div>
+                        <h5 class="mt-3">People (5)</h5>
+                        <div id="character-favorites">
+                            <img width="72px" height="112px" src="https://cdn.myanimelist.net/r/140x220/images/voiceactors/1/62968.jpg?s=ce03b4f5a53f865f868eab1ff44e9e59" alt="">
+                            <img width="72px" height="112px" src="https://cdn.myanimelist.net/r/140x220/images/voiceactors/3/70398.jpg?s=3afb330a51b902036ac66e6c3e64a0c6" alt="">
+                            <img width="72px" height="112px" src="https://cdn.myanimelist.net/r/140x220/images/voiceactors/2/62615.jpg?s=2bf2df7e1b2880b89a19655d5199df9f" alt="">
+                            <img width="72px" height="112px" src="https://cdn.myanimelist.net/r/140x220/images/voiceactors/3/63662.jpg?s=c0a0e827278cc7f99c7687b02bb811b5" alt="">
+                            <img width="72px" height="112px" src="https://cdn.myanimelist.net/r/140x220/images/voiceactors/2/63392.jpg?s=36e01e88b073831e9a71f74c46631c5b" alt="">
+                        </div>
+                        
+                        <div id="comments" class="d-flex justify-content-between align-items-end">
+                            <h2 class="mt-5">Comments</h2>
+                            <span class="mb-2"><a href="#">All Comments (0)</a></span>
+                        </div>
+                        <textarea cols="60" rows="6" style="width:786px; background-color: #333;border: none; font-size: 11px;" placeholder="Write a new comment"></textarea>
+                        <div class="container text-center">
+                            <button type="button" class="btn btn-primary" id="submit-comment">Submit Comment</button>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
