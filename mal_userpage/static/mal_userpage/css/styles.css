@@ -85,12 +85,15 @@ h5 {
 
 .container, col{
     color: #e0e0e0 !important;
+    border-color: #272727;
+    border-style: solid;
+    border-width: 0 1px 1px;
 }
 
 .main-row {
 }
 
-.left-column {
+.left-column.d-flex.flex-column {
     width: 225px;
     padding: 8px 8px 8px 0;
 }
@@ -100,12 +103,12 @@ h5 {
 }
 
 #profilepic-leftcolumn img {
-        height: 225px !important;
-        width: 225px !important;
+    height: 225px !important;
+    width: 225px !important;
 }
 
 .right-column {
-    border-color: #222;
+    border-color: #222!important;
     border-style: solid;
     border-width: 0 0 0 1px;
     padding-left: 8px;
@@ -302,6 +305,147 @@ h5 {
     font-size: 12px !important;
 }
 
+.row.user-function .col.user-icon.comment,.row.user-function .col.user-icon.message,.row.user-function .col.user-icon.request,.row.user-function .col.user-icon.gift {
+    border: 1px solid #414141 ;
+    font-size: 18px;
+}
+
+.row.user-function .col.user-icon{
+    margin : 0 2px;
+    position : relative;
+    height : 32px;
+    width : 50px;
+    border-radius : 2px;
+    text-align: center;
+    padding: 0px !important;
+}
+
+.user-current {
+    font-size: 11px;
+    font-family: Verdana, Arial;
+    padding: 4px;
+    display: block;
+    width: 216px;
+}
+
+.user-current .title{
+    font-family: Avenir,lucida grande,tahoma,verdana,arial,sans-serif;
+    font-size: 13px;
+}
+
+.user-current a{
+text-decoration: none !important;
+color: #abc4ed !important;
+}
+h4 a{
+    text-decoration: none !important;
+    color: #abc4ed !important;
+}
+.user-status.border-top{
+    margin:0px;
+    padding: 0px;
+    border-top:2px solid #222 !important;
+    margin-bottom:4px !important;
+    padding-bottom:8px !important;
+}
+.user-data.border-top{
+    border-top:2px solid #222 !important;
+    margin:0px;
+    padding: 0px;
+}
+.container.user-function{
+    padding:0px;
+    margin-bottom:8px;
+    border: none !important;
+}
+
+.container .row.user-function{
+    margin: 0 auto;
+    border: none !important;
+}
+
+.fw-b{
+    font-weight: 700;
+}
+
+.fl-r{
+    float:right;
+}
+
+.mt12{
+    margin-top: 12px !important;
+}
+.mb12{
+    margin-bottom: 12px !important;
+}
+
+.user-list{
+    font-family: Avenir, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #4065ba;
+    border:none;
+    padding: 8px 0;
+    text-align: center;
+    height:30px;
+    width:103px;
+    border-radius: 2px;
+}
+.d-flex.justify-content-evenly.user-btn{
+    margin-bottom: 12px !important;
+}
+
+.left-column.d-flex.flex-column h4{
+    border-bottom: #222 1px solid;
+    font-family: Avenir,lucida grande,tahoma,verdana,arial,sans-serif;
+    font-size: 14px;
+    margin-top: 18.62px;
+    margin-bottom: 4px;
+    padding-bottom: 2px;
+}
+
+.user-font11VA{
+    font-size: 11px;
+    font-family: Verdana,Arial;
+}
+
+.bgclr12{
+    background-color: #121212;
+}
+.bgclr18{
+    background-color: #181818;
+}
+.pl4{
+    padding-left: 4px;
+}
+.pr4{
+    padding-right: 4px;
+}
+.pt12{
+    padding-top: 12px;
+}
+.pb12{
+    padding-bottom: 12px;
+}
+.dispb{
+    display: block;
+}
+.pb4{
+    padding-bottom: 4px;
+}
+.pt4{
+    padding-top: 4px;
+}
+
+.mb8{
+    margin-bottom: 8px !important;
+}
+.m0{
+    margin: 0;
+}
+.p0{
+    padding: 0;
+}
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -373,4 +517,3 @@ h5 {
   .bd-mode-toggle {
     z-index: 1500;
   }
-
