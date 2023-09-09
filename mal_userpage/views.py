@@ -18,22 +18,27 @@ def index(request):
     animestats = AnimeStats.objects.get(user=current_user)
     mangastats = MangaStats.objects.get(user=current_user)
 
-    # 1. UserAnimeScoreから現在のユーザーに関連するスコアをすべて取得
     anime_user_scores = UserAnimeScore.objects.filter(user=current_user)
     manga_user_scores = UserMangaScore.objects.filter(user=current_user)
 
-    # 2. これらのスコアをanime_idをキーとする辞書に変換
     anime_scores_dict = {score.anime.id: score.score for score in anime_user_scores}
     manga_scores_dict = {score.manga.id: score.score for score in manga_user_scores}
     
+    animes_with_scores = []
+    for anime in animes:
+        score = anime_scores_dict.get(anime.id, '-')
+        animes_with_scores.append({'anime': anime, 'score': score})
+        
+    mangas_with_scores = []
+    for manga in mangas:
+        score = manga_scores_dict.get(manga.id, '-')
+        mangas_with_scores.append({'manga': manga, 'score': score})
+        
     context = {
-        'name': 'Sakurai',
-        'animes': animes,
-        'mangas': mangas,
         'animestats' : animestats,
         'mangastats' :mangastats,
-        'animescore' : anime_scores_dict,
-        'mangascore' : manga_scores_dict,
+        'animes_with_scores': animes_with_scores,
+        'mangas_with_scores': mangas_with_scores,
     }
     
     return render(request, 'mal_userpage/index.html', context)
