@@ -1,0 +1,43 @@
+[
+    {
+      "model": "auth.user",
+      "pk": 1,
+      "fields": {
+        "username": "takagi",
+        "password": "pbkdf2_sha256$600000$zpx7rHudC1hrUdZl727j00$KyGmIxnFCvRofdYMF+9DOZS4476tTqJ42rN+XVGksyc=",
+        "first_name": "takagi",
+        "last_name": "san",
+        "email": "takagi@san.com",
+        "is_active": true
+      }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+          "username": "nishikata",
+          "password": "pbkdf2_sha256$600000$zpx7rHudC1hrUdZl727j00$KyGmIxnFCvRofdYMF+9DOZS4476tTqJ42rN+XVGksyc=",
+          "first_name": "nishi",
+          "last_name": "kata",
+          "email": "nishi@kata.com",
+          "is_active": true
+        }
+      },
+
+      {
+        "model": "auth_app.userprofile",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "profile_picture": "https://i.pinimg.com/originals/5b/99/11/5b991176818eb0e9d1d176d0f81fe309.jpg"
+        }
+    },
+    {
+        "model": "auth_app.userprofile",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "profile_picture": "https://64.media.tumblr.com/7c8783120a9344c0f6d87a9583a62f17/tumblr_pcyld2hrGr1x2q4f4o3_640.jpg"
+        }
+    }
+  ]

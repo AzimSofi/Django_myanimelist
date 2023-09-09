@@ -5,7 +5,6 @@
         "fields": {
             "name": "Yotsuba to!",
             "picture_url": "https://cdn.myanimelist.net/r/80x120/images/manga/5/259524.webp?s=1e9f3d22ddbc57950c777768ece86d24",
-            "user_score": 9,
             "ch_read": 10,
             "ch_total": "?"
         }
@@ -16,7 +15,6 @@
         "fields": {
             "name": "Isekai no Honya-san e Youkoso!",
             "picture_url": "https://cdn.myanimelist.net/r/80x120/images/manga/3/208724.webp?s=ceaa5a6ef2bb89f33590dc703e5a4e9c",
-            "user_score": "-",
             "ch_read": 1,
             "ch_total": 15
         }
@@ -27,9 +25,66 @@
         "fields": {
             "name": "Karakai Jouzu no Takagi-san",
             "picture_url": "https://cdn.myanimelist.net/r/80x120/images/manga/3/136045.webp?s=3e6ebd7ce5b0acaed3d53a157f17a28b",
-            "user_score": 6,
             "ch_read": 18,
             "ch_total": "?"
         }
+    },
+
+
+    {
+        "model": "mal_userpage.usermangascore",
+        "pk": 1,
+        "fields": {
+            "user_id": 1,
+            "manga_id": 1,
+            "score": 6
+        }
+    },
+    {
+        "model": "mal_userpage.usermangascore",
+        "pk": 2,
+        "fields": {
+            "user_id": 1,
+            "manga_id": 2,
+            "score": 3
+        }
+    },
+    {
+        "model": "mal_userpage.usermangascore",
+        "pk": 3,
+        "fields": {
+            "user_id": 1,
+            "manga_id": 3,
+            "score": "-"
+        }
+    },
+
+    {
+        "model": "mal_userpage.usermangascore",
+        "pk": 4,
+        "fields": {
+            "user_id": 2,
+            "manga_id": 1,
+            "score": "-"
+        }
+    },
+    {
+        "model": "mal_userpage.usermangascore",
+        "pk": 5,
+        "fields": {
+            "user_id": 2,
+            "manga_id": 2,
+            "score": 9
+        }
+    },
+    {
+        "model": "mal_userpage.usermangascore",
+        "pk": 6,
+        "fields": {
+            "user_id": 2,
+            "manga_id": 3,
+            "score": 5
+        }
     }
+    
 ]

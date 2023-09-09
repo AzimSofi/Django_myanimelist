@@ -5,7 +5,6 @@
         "fields": {
             "name": "Spy Kyoushitsu",
             "picture_url": "https://cdn.myanimelist.net/r/80x120/images/anime/1491/132864.webp?s=bf8969abc40221f2202d481e3c15f6a0",
-            "user_score": 5,
             "ep_watched": 10,
             "ep_total": 12
         }
@@ -16,7 +15,6 @@
         "fields": {
             "name": "Watashi no Shiawase na Kekkon",
             "picture_url": "https://cdn.myanimelist.net/r/80x120/images/anime/1147/122444.webp?s=2a011186fe78cff6075b82c9f266d64c",
-            "user_score": 7,
             "ep_watched": 5,
             "ep_total": 12
         }
@@ -27,9 +25,65 @@
         "fields": {
             "name": "Guild no Uketsukejou desu ga, Zangyou wa Iya nanode Boss wo Solo Toubatsu Shiyou to Omoimasu",
             "picture_url": "https://cdn.myanimelist.net/r/80x120/images/anime/1173/137197.webp?s=0b960d802f5caac8c7ba80c31bec089a",
-            "user_score": "-",
             "ep_watched": "-",
             "ep_total": 12
+        }
+    },
+
+    {
+        "model": "mal_userpage.useranimescore",
+        "pk": 1,
+        "fields": {
+            "user_id": 1,
+            "anime_id": 1,
+            "score": 8
+        }
+    },
+    {
+        "model": "mal_userpage.useranimescore",
+        "pk": 2,
+        "fields": {
+            "user_id": 1,
+            "anime_id": 2,
+            "score": 7
+        }
+    },
+    {
+        "model": "mal_userpage.useranimescore",
+        "pk": 3,
+        "fields": {
+            "user_id": 1,
+            "anime_id": 3,
+            "score": "-"
+        }
+    },
+    {
+        "model": "mal_userpage.useranimescore",
+        "pk": 4,
+        "fields": {
+            "user_id": 2,
+            "anime_id": 1,
+            "score": 4
+        }
+    },
+    {
+        "model": "mal_userpage.useranimescore",
+        "pk": 5,
+        "fields": {
+            "user_id": 2,
+            "anime_id": 2,
+            "score": "-"
+        }
+    },
+
+
+    {
+        "model": "mal_userpage.useranimescore",
+        "pk": 6,
+        "fields": {
+            "user_id": 2,
+            "anime_id": 3,
+            "score": 5
         }
     }
 ]

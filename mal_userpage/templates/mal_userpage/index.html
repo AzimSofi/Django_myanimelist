@@ -18,40 +18,17 @@
     </head>
     <body>    
         <div class="profile_container">
-            <header>
-                <div class="mt- mb-2 d-flex justify-content-between align-items-center">
-                    <div>
-                        <img height="48px" src="https://cdn.myanimelist.net/images/mal-logo-xsmall-white@2x.png?v=1634263200">
-                    </div>
-                    <div class="grey_text d-flex flex-row">
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle grey_text" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <strong>{{ name }}</strong>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">プロフィール</a></li>
-                                <li><a class="dropdown-item" href="#">設定</a></li>
-                                <li><a class="dropdown-item" href="#">ログアウト</a></li>
-                            </ul>
-                        </div id="">
-                            <img class="align-self-center" width="30px" height="30px" src="https://cdn.myanimelist.net/s/common/userimages/809c4c22-7a15-4866-9bd9-9ab1b74f00a4_225w?s=859f8fb3071ac92c9e3762efc36804a8">    
-                        </div>
-                </div>
-            </header>
-            <div class="navbar d-flex justify-content-start">
-                <a href="#home">ホーム</a>
-                <a href="#about">アバウト</a>
-                <a href="#services">サービス</a>
-                <a href="#contact">コンタクト</a>
-            </div>
+            {% include "header.html" %}
             <h1 class="mt-2" id="profile_header-3">
-                {{ name }}'s profile
+                {{ user.username }}'s profile
             </h1>
             <div class="container">
                 <div class="d-flex flex-row main-row">
-                    <div class="left-column d-flex flex-column">
-                        <div id="profilepic-leftcolumn">
-                            <img src="https://cdn.myanimelist.net/s/common/userimages/809c4c22-7a15-4866-9bd9-9ab1b74f00a4_225w?s=859f8fb3071ac92c9e3762efc36804a8">
+                    <div class="me-2">
+                        <div class="left-column d-flex flex-column">
+                            <div id="profilepic-leftcolumn">
+                                <img src="{{ user.userprofile.profile_picture }}">
+                            </div>
                         </div>
                     </div>
                     <div class="right-column flex-fill mt-4">

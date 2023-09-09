@@ -1,7 +1,9 @@
 [
     {
         "model": "mal_userpage.animestats",
+        "pk": 1,
         "fields": {
+            "user": 1,
             "Watching": 24,
             "Completed": 48,
             "OnHold": 0,
@@ -14,7 +16,9 @@
     },
     {
         "model": "mal_userpage.mangastats",
+        "pk": 1,
         "fields": {
+            "user": 1,
             "Reading": 17,
             "Completed": 1,
             "OnHold": 2,
@@ -24,6 +28,40 @@
             "Reread": 0,
             "Chapters": 160,
             "Volumes": 14
+        }
+    },
+
+
+
+    {
+        "model": "mal_userpage.animestats",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "Watching": 1,
+            "Completed": 5,
+            "OnHold": 0,
+            "Dropped": 1,
+            "PlanToWatch": 3,
+            "TotalEntries": 9,
+            "Rewatched": 0,
+            "Episodes": 65
+        }
+    },
+    {
+        "model": "mal_userpage.mangastats",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "Reading": 2,
+            "Completed": 1,
+            "OnHold": 0,
+            "Dropped": 0,
+            "PlanToWatch": 0,
+            "TotalEntries": 5,
+            "Reread": 0,
+            "Chapters": 77,
+            "Volumes": 6
         }
     }
 ]
