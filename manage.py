@@ -21,4 +21,7 @@ def main():
 if __name__ == '__main__':
     main()
 
+# RUN to startup
+
 # python manage.py runserver
+# python manage.py loaddata user.json anime_data.json user_anime_manga_data.json manga_data.json
