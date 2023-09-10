@@ -1,20 +1,96 @@
-<!-- モーダルのコード -->
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'mal_userpage/css/add.css' %}">
+</head>
 <div class="modal fade" id="addAnimeMangaModal" tabindex="-1" aria-labelledby="addAnimeMangaModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+        <div class="modal-content add-body">
             <div class="modal-header bg-dark text-light">
                 <h5 class="modal-title" id="addAnimeMangaModalLabel" style="border: 0;">アニメやマンガを追加</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                <!-- ここにフォームや情報を追加することができます -->
+            </div>
+            <div class="modal-body">
                 アニメやマンガの情報を入力してください。
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                あ
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">キャンセル</button>
-                <button type="button" class="btn btn-primary">保存</button>
+                <form method="post">
+                    {% csrf_token %}
+                    <main class="d-flex flex-column align-items-center form-signin m-auto">
+                        <h1 class="mt-5 mb-5" style="font-size: 30px !important;">ようこそ</h1>
+                        <div class="mb-1"></div>
+                    
+                        {% if form.non_field_errors %}
+                        <div class="alert alert-danger">
+                            {{ form.non_field_errors }}
+                        </div>
+                        {% endif %}
+
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="anime">Anime</label>
+                                    <input type="radio" id="anime" name="drone" value="true" checked/>
+                                </div>
+                                <div class="col">
+                                        <label for="manga">Manga</label>
+                                        <input type="radio" id="manga" name="drone" value="true"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-center justify-content-center mt-3">
+                            <div class="userinput-box form-group">
+                                <div class="d-flex justify-content-between align-items-end">
+                                    <label class="grey_text" for="{{ form.name.id_for_label }}">Name</label>
+                                </div>
+                                <input class="grey_text" type="text" name="name" id="{{ form.name.id_for_label }}" maxlength="50">
+                                {% if form.name.errors %}
+                                    <div class="mt-2 alert alert-danger">
+                                        {{ form.name.errors }}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+                        <div class="userinput-box form-group">
+                            <div class="d-flex justify-content-between align-items-end">
+                                <label class="grey_text" for="{{ form.picture.id_for_label }}">Picture</label>
+                            </div>
+                            <input class="grey_text" type="text" name="picture_url" id="{{ form.picture.id_for_label }}" maxlength="50">
+                            {% if form.picture.errors %}
+                                <div class="alert alert-danger">
+                                    {{ form.picture.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="userinput-box form-group">
+                            <div class="d-flex justify-content-between align-items-end">
+                                <label class="grey_text" for="{{ form.ep_watched.id_for_label }}">Episode watched</label>
+                            </div>
+                            <input class="grey_text" type="text" name="ep_watched" id="{{ form.ep_watched.id_for_label }}" maxlength="50">
+                            {% if form.ep_watched.errors %}
+                                <div class="alert alert-danger">
+                                    {{ form.ep_watched.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="userinput-box form-group">
+                            <div class="d-flex justify-content-between align-items-end">
+                                <label class="grey_text" for="{{ form.ep_total.id_for_label }}">Episode total</label>
+                            </div>
+                            <input class="grey_text" type="text" name="ep_total" id="{{ form.ep_total.id_for_label }}" maxlength="50">
+                            {% if form.ep_total.errors %}
+                                <div class="mt-2 alert alert-danger">
+                                    {{ form.ep_total.errors }}
+                                </div>
+                            {% endif %}
+                            <div class="mb-5"></div>
+                        </div>
+                    </main>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">キャンセル</button>
+                        <button type="button" class="btn btn-primary bg-mal-blue">保存</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

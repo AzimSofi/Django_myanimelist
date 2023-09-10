@@ -1,0 +1,25 @@
+.add-body {
+    background-color: #212529;
+}
+
+form input {
+    background-color: #333;
+    border: none;
+    width: 402px;
+    height: 42px;
+}
+
+.bg-mal-blue {
+    background-color: #2e51a2 !important;
+    border-color: #2e51a2 !important;
+}
+
+.bg-mal-blue:active,
+.bg-mal-blue:hover {
+    background-color: #2c4274 !important;
+    border-color: #2c4274 !important;
+}
+
+input[type="radio"] {
+    background-color: #a82121 !important;
+}
